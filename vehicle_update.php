@@ -139,12 +139,12 @@
                   </div>
                 </div>
                 
-                <input type="number" name="quantity" placeholder="<?php echo "$quantity_db";?>" class="form-control" required="">
+                <input type="number" name="quantity" placeholder="update plate number" class="form-control" required="">
 
                 <label class="form-label" for="form3Example1"></label>
                 <br>
               <button type="submit" name="submit" class="btn btn-primary btn-block mb-2">
-                ADD
+                UPDATE
               </button>
             </form>
           </div>
