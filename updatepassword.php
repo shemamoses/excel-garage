@@ -165,10 +165,10 @@
       </div>
     </div>
   </div>
-  
-</section>
-</body>
-<footer style="position: bottom: 0; left: 0; width: 100%; text-align: center;">
+  <footer style="position: bottom: 0; left: 0; width: 100%; text-align: center;">
   <p style="color: white;">&copy; Excel Garage. All rights reserved.</p>
 </footer>
+</section>
+</body>
+
 </html>

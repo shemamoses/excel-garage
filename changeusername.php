@@ -226,7 +226,11 @@ It has been corporate in 2011 beneath the activity of Mr. Felix Rurangirwa
       </div>
     </div>
   </div>
+  <footer style="position: bottom: 0; left: 0; width: 100%; text-align: center;">
+  <p style="color: white;">&copy; Excel Garage. All rights reserved.</p>
+</footer>
 </section>
 
   </body>
+  
 </html>
