@@ -192,9 +192,7 @@
   </div>
   <br>
   <button type="submit" name="send" class="btn btn-info">Check</button>
-<div>
-  <a href="download_vehiclereport.php"><button class="btn btn-info">Save Excel File</button></a>
-</div>
+
 		
 </div>
 <br>
