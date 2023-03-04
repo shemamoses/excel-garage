@@ -161,9 +161,6 @@
   </div>
   <br>
   <button type="submit" name="send" class="btn btn-info">Check</button>
-      <div><br>
-        <a href="download_generalreport.php"><button class="btn btn-info">Save Excel File</button></a>
-      </div>
 </div>
 <br>
 <div class="container-lg">

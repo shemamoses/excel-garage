@@ -143,7 +143,7 @@
           </tbody>
      <tfoot>
       <tr>
-       <th colspan="9">Total</th>
+       <th colspan="8">Total</th>
           <?php
             @$result=$mysqli->query("SELECT sum(product.totalprice) FROM product INNER JOIN vehicles WHERE product.vehicle_id=vehicles.vehicle_id AND vehicles.plate LIKE '%$input%'") or die("sum failed");
             while($row=mysqli_fetch_array($result)){

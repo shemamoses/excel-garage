@@ -182,7 +182,15 @@ It has been corporate in 2011 beneath the activity of Mr. Felix Rurangirwa
 
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
+            <?php
+              $select_plate=$mysqli->query("SELECT * FROM vehicles WHERE vehicle_id={$id}") or die("select plate failed");
+              while ($result=mysqli_fetch_array($select_plate)) 
+              {
+                $plate_db=$result['plate'];
+              }
+            ?>
             <form method="POST">
+              <center><?php echo $plate_db;?></center>
               <div class="row">
                 <div class="form-outline mb-4">
                   <div class="form-outline">

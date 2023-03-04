@@ -39,37 +39,6 @@
             </div>
         </div>
     </nav>
-    <?php
-        if (isset($_GET['product_id']))
-        {
-            $id=$_GET['product_id'];
-            $select=$mysqli->query("SELECT * FROM product WHERE product_id={$id}") or die("select failed");
-            while ($fetch=mysqli_fetch_array($select)) 
-            {
-              $price_db=$fetch['price'];
-              $quantity_db=$fetch['quantity'];
-              $totalprice_db=$fetch['totalprice'];
-            }
-        }
-        if (isset($_POST['submit'])) 
-        {
-          $date=date("y-m-d");
-          $time=date("H:i:s");
-          $quantity_fm=$_POST['quantity'];
-          @$newprice=$price_db+$price_fm;
-          @$newquantity=$quantity_db+$quantity_fm;
-          $newtotalprice=$newprice*$newquantity;
-          $update=$mysqli->query("UPDATE product SET date='$date' time='$time',price='$newprice',quantity='$newquantity',totalprice='$newtotalprice' WHERE product_id={$id}") or die("update failed");
-        
- 		      if ($update) 
- 		      {
-			      echo "<script>window.alert('Records are added successfully!!!')</script>";
-			      echo "<script>window.location.replace('viewproduct.php')</script>";
- 		      }
-        } 
-    ?>
-
-
 <section class="background-radial-gradient overflow-hidden">
   <style>
     .background-radial-gradient {
@@ -117,8 +86,8 @@
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
         <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          ADD <br />
-          <span style="color: hsl(218, 81%, 75%)">QUANTITY</span>
+          UPDATE <br />
+          <span style="color: hsl(218, 81%, 75%)">PLATE NUMBER</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
         Certainly! When you add the unregistered vehicle plate number in the designated field for Excel Tours Agency, you are helping them keep accurate records and manage their garage more effectively. This ensures that the agency is aware of all the vehicles being used for tours and can schedule maintenance accordingly, which ultimately leads to a more enjoyable and safe travel experience for you. By providing the correct information, you are helping Excel Tours Agency and Excel Garage work together to provide the best service possible. Thank you for your cooperation and have a great tour!
@@ -129,7 +98,12 @@
         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
         <div id="radius-shape-2" class="position-absolute shadow-5-strong">
         </div>
-
+<?php
+		  include 'link.php';
+		  $id=$_GET['vehicle_id'];
+		  $select=$mysqli->query("SELECT * FROM vehicles WHERE vehicle_id='$id'");
+           while ($fetch=mysqli_fetch_array($select)) { 
+                                              ?>
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
             <form method="POST">
@@ -139,7 +113,7 @@
                   </div>
                 </div>
                 
-                <input type="number" name="quantity" placeholder="update plate number" class="form-control" required="">
+                <input type="text" name="plate" class="form-control" required="" value="<?php echo $fetch['plate']; ?>">
 
                 <label class="form-label" for="form3Example1"></label>
                 <br>
@@ -149,6 +123,24 @@
             </form>
           </div>
         </div>
+        <?php
+        }
+        if (isset($_POST['submit'])) 
+        {
+            $plate=$_POST['plate'];
+         $update=$mysqli->query("UPDATE vehicles SET plate='$plate' where vehicle_id='$id'");
+         if ($update) 
+         {
+             echo"<script>alert('Vehicle well updated');</script>";
+             echo "<script>window.location.replace('viewvehicle.php')</script>";
+         }
+         else
+         {
+             echo"<script>alert('Failed To Update Vehicle');</script>";
+             echo "<script>window.history.back('viewvehicle.php')</script>";
+         }
+        }
+                    ?>
       </div>
     </div>
   </div>
