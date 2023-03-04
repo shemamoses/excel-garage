@@ -9,6 +9,31 @@
 		<script src="bootstrap/js/bootstrap.min.js"></script>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+ 
+ ::-webkit-scrollbar {
+   width: 8px;
+   height: 5px;
+   
+ }
+
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1;
+ }
+
+
+ ::-webkit-scrollbar-thumb {
+   background: linear-gradient(transparent, #30ff00);
+   border-radius: 6px;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+   background: linear-gradient(transparent, #00c6ff);
+   border-radius: 6px;
+ }
+</style>
+
   </head>
   <body><?php
 	session_start();
@@ -22,7 +47,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="#" class="navbar-brand">AEXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
