@@ -125,42 +125,6 @@
       backdrop-filter: saturate(200%) blur(25px);
     }
   </style>
-    
-		<?php
-          include 'link.php';
-          if (isset($_GET['product_id'])) 
-          {
-              $id=$_GET['product_id'];
-              $select=$mysqli->query("SELECT * FROM product WHERE product_id='$id'") or die("select failed");
-           while ($fetch=mysqli_fetch_array($select)) {
-           	?>
-<?php
-$quantity_db=$fetch['quantity'];
-}
-          
-}
-if (isset($_POST['submit'])) 
-{
-    $date=date('y-m-d');
-    $driver=$_POST['driver'];
-    $tel=$_POST['tel'];
-    $service=$_POST['service'];
-    $price=$_POST['price'];
-    $totalprice=$quantity_db*$price;
-    $update=$mysqli->query("UPDATE product SET driver='$driver',telephone='$tel',service='$service',date='$date',price='$price',totalprice='$totalprice' where product_id='$id'");
-        if ($update) 
-        {
-            echo"<script>alert('Product well updated');</script>";
-            echo "<script>window.location.replace('viewproduct.php')</script>";
-        }
-            else
-        {
-            echo"<script>alert('Product Not Updated');</script>";
-            echo "<script>window.history.back()</script>";
-        }
-}
-            
-    ?>
 
 <section class="background-radial-gradient overflow-hidden">
   <style>
@@ -224,22 +188,31 @@ if (isset($_POST['submit']))
 
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
+    
+		<?php
+          include 'link.php';
+          if (isset($_GET['product_id'])) 
+          {
+              $id=$_GET['product_id'];
+              $select=$mysqli->query("SELECT * FROM product WHERE product_id='$id'") or die("select failed");
+           while ($fetch=mysqli_fetch_array($select)) {
+           	?>
             <form method="POST">
               <div class="row">
                 <div class="form-outline mb-4">
                   <div class="form-outline">
                   </div>
                 </div>
-  <input type="text" name="driver" value="<?php echo $fetch['driver'];?>" class="form-control">
-  <label class="form-label" for="form3Example1"></label>
-  <br>
-  <input type="text" name="tel" value="<?php echo $fetch['telephone'];?>" class="form-control">
-  <label class="form-label" for="form3Example1"></label>
-  <br>
-  <input type="text" name="service" value="<?php echo $fetch['service'];?>" class="form-control">
-  <label class="form-label" for="form3Example1"></label>
-  <br>
-  <input type="text" name="price" value="<?php echo $fetch['price'];?>" class="form-control">
+                      <input type="text" name="driver" value="<?php echo $fetch['driver'];?>" class="form-control">
+                      <label class="form-label" for="form3Example1"></label>
+                      <br>
+                      <input type="text" name="tel" value="<?php echo $fetch['telephone'];?>" class="form-control">
+                      <label class="form-label" for="form3Example1"></label>
+                      <br>
+                      <input type="text" name="service" value="<?php echo $fetch['service'];?>" class="form-control">
+                      <label class="form-label" for="form3Example1"></label>
+                      <br>
+                      <input type="text" name="price" value="<?php echo $fetch['price'];?>" class="form-control">
 
                 <label class="form-label" for="form3Example1"></label>
                 <br>
@@ -248,6 +221,33 @@ if (isset($_POST['submit']))
               </button>
             </form>
           </div>
+            <?php
+            $quantity_db=$fetch['quantity'];
+            }
+                      
+            }
+            if (isset($_POST['submit'])) 
+            {
+                $date=date('y-m-d');
+                $driver=$_POST['driver'];
+                $tel=$_POST['tel'];
+                $service=$_POST['service'];
+                $price=$_POST['price'];
+                $totalprice=$quantity_db*$price;
+                $update=$mysqli->query("UPDATE product SET driver='$driver',telephone='$tel',service='$service',date='$date',price='$price',totalprice='$totalprice' where product_id='$id'");
+                    if ($update) 
+                    {
+                        echo"<script>alert('Product well updated');</script>";
+                        echo "<script>window.location.replace('viewproduct.php')</script>";
+                    }
+                        else
+                    {
+                        echo"<script>alert('Product Not Updated');</script>";
+                        echo "<script>window.history.back()</script>";
+                    }
+            }
+                        
+                ?>
         </div>
       </div>
     </div>

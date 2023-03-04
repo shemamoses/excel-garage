@@ -96,7 +96,6 @@
 <div class="table-responsive">
 	<table class="table table-hover table-striped">
   <thead class="table-info">
-		<th>Vehicle No</th>
 		<th>Plate Number</th>
 		<th colspan="3">Actions</th>
   </thead>
@@ -107,7 +106,6 @@
            while ($fetch=mysqli_fetch_array($select)) {
            	?>
            	<tr>
-           		<td><?php echo $fetch['vehicle_id'] ?></td>
            		<td><?php echo $fetch['plate'] ?></td>
            		<td><a href="product.php?vehicle_id=<?php echo $fetch['vehicle_id'] ?>"><button class="btn btn-primary">New service</button></a></td>
            		<td><a href="vehicle_delete.php?vehicle_id=<?php echo $fetch['vehicle_id'] ?>"><button class="btn btn-danger">Delete</button></a></td>
