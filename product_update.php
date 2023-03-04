@@ -253,5 +253,8 @@
     </div>
   </div>
 </section>
+<footer style="position: bottom: 0; left: 0; width: 100%; text-align: center;">
+  <p style="color: white;">&copy; Excel Garage. All rights reserved.</p>
+</footer>
 </body>
 </html>

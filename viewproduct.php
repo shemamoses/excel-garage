@@ -185,7 +185,7 @@
 	<tbody>
 	<?php
 		  include 'link.php';
-		  $select=$mysqli->query("SELECT product.*,vehicles.* FROM product INNER JOIN vehicles WHERE product.vehicle_id=vehicles.vehicle_id")or die("select failed");
+		  $select=$mysqli->query("SELECT product.*,vehicles.* FROM product INNER JOIN vehicles WHERE product.vehicle_id=vehicles.vehicle_id ORDER BY date DESC")or die("select failed");
            while ($fetch=mysqli_fetch_array($select)) {
             $price_db=$fetch['price'];
             $price_format=number_format($price_db);
