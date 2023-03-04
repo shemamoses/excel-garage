@@ -1,0 +1,5 @@
+.background-radial-gradient 
+{
+  backdrop-filter: blur(2px);
+  background-color: rgba(178,60,253,0.05);
+}

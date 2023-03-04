@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../Users/SHEMA/Desktop/js"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Users/SHEMA/Desktop/complete-javascript-course-master"
+		}
+	],
+	"settings": {
+		"editor.linkedEditing": true,
+		"files.autoSave": "afterDelay",
+		"editor.wordWrap": "on",
+		"liveServer.settings.multiRootWorkspaceName": "complete-javascript-course-master"
+	}
+}
