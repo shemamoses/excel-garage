@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> 
+    <link rel="icon" sizes="16x16" href="pictures/logo.png">
+    
+ 
     
     <style>
     /* Set the width and height of the scrollbar */
@@ -68,6 +71,49 @@
             </div>
         </div>
     </nav>
+    <section class="background-radial-gradient overflow-hidden">
+  <style>
+    .background-radial-gradient {
+      background-color: hsl(218, 41%, 15%);
+      background-image: radial-gradient(650px circle at 0% 0%,
+          hsl(218, 41%, 35%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+          hsl(218, 41%, 45%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%);
+    }
+
+    #radius-shape-1 {
+  height: 220px;
+  width: 220px;
+  top: -60px;
+  left: -130px;
+  background: radial-gradient(#44006b, #ad1fff);
+  overflow: hidden;
+}
+
+#radius-shape-2 {
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  bottom: -60px;
+  right: -110px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(#44006b, #ad1fff);
+  overflow: hidden;
+}
+
+.bg-glass {
+  background-color: hsla(0, 0%, 100%, 0.9) !important;
+  backdrop-filter: saturate(200%) blur(25px);
+} 
+
+</style>
     <br>
 		<div class="card-body">
       <div class="row justify-content-center">
@@ -80,6 +126,7 @@
           </form>
         </div>
       </div>
+      
       <?php
         if (isset($_POST['send'])) 
         {
@@ -87,9 +134,15 @@
           $select=$mysqli->query("SELECT * FROM vehicles JOIN product ON vehicles.vehicle_id = product.vehicle_id WHERE vehicles.plate LIKE '%$input%'")or die("select failed");
       ?>
       <br>
+      <div class="">
+  <div class="card bg-glass">
+          <div class="card-body px-4 py-3 px-md-5">
+              <div class="row">
+                <div class="form-outline mb-4">
+                  <div class="form-outline">
       <div class="table-responsive">
           <table class="table table-hover table-striped">
-          <thead>
+          <thead class="shadow">
           <tr>
               <td><b>Plate Number</td>
               <td><b>Telephone</td>
@@ -157,9 +210,17 @@
             }
           ?>
           </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
     <?php
         }
     ?>
+    
   </body>
 </html>

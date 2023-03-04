@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/jquery/jquery.min.js"></script>  
+    <link rel="icon" sizes="16x16" href="pictures/logo.png">
   </head>
 <?php
 include 'link.php';
