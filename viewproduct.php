@@ -227,7 +227,7 @@
 
      <tfoot>
       <tr>
-       <th colspan="9" class="shadow">Total</th>
+       <th colspan="8" class="shadow">Total</th>
           <?php
             $result=$mysqli->query("SELECT sum(totalprice) FROM product") or die("sum failed");
             while($row=mysqli_fetch_array($result)){
