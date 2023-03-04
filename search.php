@@ -87,9 +87,6 @@
           $select=$mysqli->query("SELECT * FROM vehicles JOIN product ON vehicles.vehicle_id = product.vehicle_id WHERE vehicles.plate LIKE '%$input%'")or die("select failed");
       ?>
       <br>
-      <div>
-        <a href="download_search.php"><button class="btn btn-info">Save Excel File</button></a>
-      </div>
       <div class="table-responsive">
           <table class="table table-hover table-striped">
           <thead>
