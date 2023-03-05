@@ -47,7 +47,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">AEXCEL GARAGE</a>
+            <a href="home.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -138,8 +138,12 @@
                   </div>
                 </div>
                 
-                <input type="text" name="plate" class="form-control" required="" value="<?php echo $fetch['plate']; ?>">
-
+                <input type="text" id="sessionNo" oninput="toUpperCase(this)" onkeypress="return isNumberKey(event)" maxlength="7" minlength="7" name="plate" placeholder="RAA000A" required="" id="form3Example1" class="form-control" value="<?php echo $fetch['plate']; ?>">
+                <script> 
+                      function toUpperCase(input) {
+                      input.value = input.value.toUpperCase();
+                    }
+                </script>
                 <label class="form-label" for="form3Example1"></label>
                 <br>
               <button type="submit" name="submit" class="btn btn-primary btn-block mb-2">

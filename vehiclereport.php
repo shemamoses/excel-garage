@@ -154,7 +154,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="home.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -188,7 +188,12 @@
     </div>
     <div class="col-md-3">
       <label style="color: white;">Plate number</label>
-      <input type="text" name="plate" class="form-control" placeholder="Plate number" required>
+      <input type= type="text" id="sessionNo" oninput="toUpperCase(this)" onkeypress="return isNumberKey(event)" maxlength="7" minlength="7" name="plate" placeholder="RAA000A" required="" id="form3Example1" class="form-control">
+      <script> 
+              function toUpperCase(input) {
+              input.value = input.value.toUpperCase();
+                  }
+      </script>
     </div>
   </div>
   <br>

@@ -107,7 +107,12 @@
           <div class="col-md-4">
             <form class="box" method="POST">
               <div class="form-group">
-                <input type="text" name="get_id" id="mysearch" placeholder="Search Plate number" class="form-control">
+                <input type="text" name="get_id" id="mysearch" oninput="toUpperCase(this)" onkeypress="return isNumberKey(event)" maxlength="7" minlength="7"  placeholder="Search Plate number" class="form-control">
+                <script> 
+                      function toUpperCase(input) {
+                      input.value = input.value.toUpperCase();
+                    }
+                </script>
               </div>
               <button type="submit" name="send" class="btn btn-success">Search</button>
           </form>
@@ -118,7 +123,7 @@
         if (isset($_POST['send'])) 
         {
           $input=$_POST['get_id'];
-          $select=$mysqli->query("SELECT * FROM vehicles JOIN product ON vehicles.vehicle_id = product.vehicle_id WHERE vehicles.plate LIKE '%$input%'")or die("select failed");
+          $select=$mysqli->query("SELECT * FROM vehicles JOIN product ON vehicles.vehicle_id = product.vehicle_id WHERE vehicles.plate LIKE '%$input%' ORDER BY date DESC")or die("select failed");
       ?>
       <br>
       <div class="container-lg">
@@ -221,6 +226,9 @@
     <?php
         }
     ?>
+    <footer style="position: bottom: 0; left: 0; width: 100%; text-align: center;">
+      <p style="color: white;">&copy; Excel Garage. All rights reserved.</p>
+    </footer>
     
   </body>
 </html>

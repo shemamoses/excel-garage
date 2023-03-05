@@ -41,7 +41,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="login.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -77,12 +77,12 @@
             $_SESSION['password']=$pass;
             $_SESSION['email']=$mail;
             
-			echo "<script>window.alert('$username login successful')</script>";
+			echo "<script>window.alert('$username Welcome Into Excel Garage')</script>";
 			echo "<script>window.location.replace('home.php')</script>";
 		}
 		else
 		{
-			echo "<script>window.alert('Login Fail')</script>";
+			echo "<script>window.alert('Incorrect Username,Email or Password!!!')</script>";
 			echo "<script>window.location.replace('login.php')</script>";
 		}
 

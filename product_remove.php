@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Remove Product</title>
+    <title>Remove Quantity</title>
     <link rel="stylesheet" href="vehicle.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script>
@@ -23,7 +23,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="home.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,30 +71,9 @@
         $update_product=$mysqli->query("UPDATE product SET quantity='$quantity_product',date='$date', time='$time',totalprice='$totalprice_product' WHERE product_id={$id}") or die("update_product failed");
           if ($update_product) 
           {
-              $select_export=$mysqli->query("SELECT * FROM export WHERE product_id={$id}") or die("select_export failed");
-              while ($row=mysqli_fetch_array($select_export)) 
-              {
-                $product_id_export=$row['product_id'];
-                $quantity_export=$row['equantity'];
-                $price_export=$row['price'];
-                $quantity_export=$quantity_export+$quantity_fm;
-                $totalprice_export=$quantity_export*$price_export;
-              }
-                @$update_export=$mysqli->query("UPDATE export SET equantity='$quantity_export',edate='$date',etime='$time',totalprice='$totalprice_export' WHERE product_id={$id}") or die("update_export failed");
-                if ($update_export) 
-                {
-                  $insert_export=$mysqli->query("INSERT INTO export (export_id,driver,service,price,equantity,edate,etime,totalprice,product_id,vehicle_id) VALUES ('','$driver','$service','$price_db','$quantity_fm','$date',$time,'$totalprice','$id','$vehicle_id');");
-                  if ($insert_export) 
-                  {
-                    echo "<script>window.alert('Quantity Well Removed !!!')</script>";
-                    echo "<script>window.location.replace('viewproduct.php')</script>"; 
-                  }
-                  else 
-                  {
-                    echo "<script>window.alert('Quantity Well Updated !!!')</script>";
-                    echo "<script>window.location.replace('viewproduct.php')</script>"; 
-                  }
-                }
+              echo "<script>window.alert('Quantity Well Removed !!!')</script>";
+              echo "<script>window.location.replace('viewproduct.php')</script>"; 
+           
           }
           else
           {
@@ -179,9 +158,12 @@
 <form class="box" method="POST">
   <input type="number" name="quantity" placeholder="<?php echo "$quantity_db";?>" class="form-control" required="">
   <label class="form-label" for="form3Example1"></label>
-                <br>
+  <br>
   <button type="submit" class="btn btn-primary btn-block mb-2" name="submit">REMOVE</button>
 </form>
 </div>
 </body>
+<footer style="position: bottom: 0; left: 0; width: 100%; text-align: center;">
+  <p style="color: white;">&copy; Excel Garage. All rights reserved.</p>
+</footer>
 </html>

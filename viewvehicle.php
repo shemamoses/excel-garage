@@ -61,7 +61,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark shadow">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="home.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -168,7 +168,12 @@
 <center>
     <div class="container">
   <div class="form-group">
-    <input type="text" id="myInput" placeholder="Search vehicle" class="form-control col-md-4">
+    <input type="text" id="myInput" oninput="toUpperCase(this)" onkeypress="return isNumberKey(event)" maxlength="7" minlength="7" placeholder="Search vehicle" class="form-control col-md-4">
+    <script> 
+            function toUpperCase(input) {
+            input.value = input.value.toUpperCase();
+                  }
+     </script>
   </div>
 
 <div>

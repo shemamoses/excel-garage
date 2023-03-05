@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Report</title>
+    <title>General Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script> 
@@ -41,7 +41,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="home.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>

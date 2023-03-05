@@ -52,7 +52,7 @@
 
   <nav class="navbar navbar-expand-md bg-primary navbar-dark shadow">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="home.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -206,10 +206,11 @@ if (isset($_POST['submit']))
                   </div>
                 </div>
                 <input type="text" id="sessionNo" oninput="toUpperCase(this)" onkeypress="return isNumberKey(event)" maxlength="7" minlength="7" name="plate" placeholder="RAA000A" required="" id="form3Example1" class="form-control">
-               <script> function toUpperCase(input) {
-  input.value = input.value.toUpperCase();
-}
-</script>
+               <script> 
+                      function toUpperCase(input) {
+                      input.value = input.value.toUpperCase();
+                    }
+                </script>
                 <label class="form-label" for="form3Example1"></label>
                 <br>
               <button type="submit" name="submit" class="btn btn-primary btn-block mb-2">

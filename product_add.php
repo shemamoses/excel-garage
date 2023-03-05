@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Add Product</title>
+    <title>Add Quantity</title>
     <link rel="stylesheet" href="vehicle.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script>  
@@ -23,7 +23,7 @@
   <body>
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ATHANASE GARAGE</a>
+            <a href="home.php" class="navbar-brand">EXCEL GARAGE</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -57,14 +57,13 @@
           $date=date("y-m-d");
           $time=date("H:i:s");
           $quantity_fm=$_POST['quantity'];
-          @$newprice=$price_db+$price_fm;
           @$newquantity=$quantity_db+$quantity_fm;
-          $newtotalprice=$newprice*$newquantity;
-          $update=$mysqli->query("UPDATE product SET date='$date' time='$time',price='$newprice',quantity='$newquantity',totalprice='$newtotalprice' WHERE product_id={$id}") or die("update failed");
+          $newtotalprice=$price_db*$newquantity;
+          $update=$mysqli->query("UPDATE product SET date='$date',time='$time',quantity='$newquantity',totalprice='$newtotalprice' WHERE product_id={$id}") or die("update failed");
         
  		      if ($update) 
  		      {
-			      echo "<script>window.alert('Records are added successfully!!!')</script>";
+			      echo "<script>window.alert('Quantity Well added successfully!!!')</script>";
 			      echo "<script>window.location.replace('viewproduct.php')</script>";
  		      }
         } 
