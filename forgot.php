@@ -49,7 +49,8 @@ session_start();
 
         // h-hotel account
         $mail->Username='mosesshema1@gmail.com';
-        $mail->Password='xqklieqxyrvpmdfb';
+        $mail->Password='zhvhoknunaywhakl
+        ';
 
         // send by h-hotel email
         $mail->setFrom('mosesshema1@gmail.com', 'Password Reset');
