@@ -11,6 +11,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" sizes="16x16" href="pictures/logo.png">
+    <style>
+    /* Set the width and height of the scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 5px;
+      
+    }
+
+    /* Style the scrollbar track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Style the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(transparent, #30ff00);
+      border-radius: 6px;
+    }
+
+    /* Style the scrollbar on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(transparent, #00c6ff);
+      border-radius: 6px;
+    }
+  </style>
+
   </head>
 
 <?php
