@@ -154,14 +154,15 @@ if (isset($_POST['submit']))
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
         <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          ATHANASE <br />
-          <span style="color: hsl(218, 81%, 75%)">GARAGE</span>
+          UPDATE <br />
+          <span style="color: hsl(218, 81%, 75%)">ACCOUNT</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-        Excel Travel and Tour Agency Ltd is a Private Company constrained by shared enrolled beneath 102264441(Company code/TIN/ RSSB).
-It has been corporate in 2011 beneath the activity of Mr. Felix Rurangirwa
-(50%) and Mr. Felix Gasangwa (50%) with the center commerce exercises of giving traveler transportation administrations as well as messenger administrations specialized in the Transportation sector , it was founded in 2011 with aims of providing good transportation services to the clients.
+        Welcome to Excel Garage! If you're looking to update your account credentials, you've come to the right place. We take the security of your account seriously, which is why we've made it easy for you to update your information.
+<p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+        Updating your account information is a quick and straightforward process. Simply follow the prompts to update your credentials. You can change your password, update your email address, and modify any other information that needs to be updated, and then click on Update account. Once you've made the changes, you can rest easy knowing that your account is secure and protected from unauthorized access.
         </p>
+  </p>
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">

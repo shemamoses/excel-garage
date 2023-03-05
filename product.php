@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Supply Vehicle</title>
+    <title>New Service</title>
     <link rel="stylesheet" href="vehicle.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<script src="bootstrap/js/bootstrap.min.js"></script>  
@@ -167,8 +167,8 @@
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
         <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          ATHANASE <br />
-          <span style="color: hsl(218, 81%, 75%)">GARAGE</span>
+          NEW <br />
+          <span style="color: hsl(218, 81%, 75%)">SERVICE</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
         Excel Travel and Tour Agency Ltd is a Private Company constrained by shared enrolled beneath 102264441(Company code/TIN/ RSSB).

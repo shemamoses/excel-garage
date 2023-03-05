@@ -115,7 +115,9 @@
           <span style="color: hsl(218, 81%, 75%)">PLATE NUMBER</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-        Certainly! When you add the unregistered vehicle plate number in the designated field for Excel Tours Agency, you are helping them keep accurate records and manage their garage more effectively. This ensures that the agency is aware of all the vehicles being used for tours and can schedule maintenance accordingly, which ultimately leads to a more enjoyable and safe travel experience for you. By providing the correct information, you are helping Excel Tours Agency and Excel Garage work together to provide the best service possible. Thank you for your cooperation and have a great tour!
+        If you have entered an incorrect or misspelled vehicle plate number, you may need to update it for accuracy. To do so, 
+ you may update in the field then click update.
+Remember that keeping your vehicle information up-to-date and accurate is important for various reasons, including avoiding any potential legal or financial issues that may arise from incorrect or outdated information.
         </p>
       </div>
 
