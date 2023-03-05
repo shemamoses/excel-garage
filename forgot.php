@@ -178,11 +178,11 @@ session_start();
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
         <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          ADD <br />
-          <span style="color: hsl(218, 81%, 75%)">QUANTITY</span>
+          RESET <br />
+          <span style="color: hsl(218, 81%, 75%)">PASSWORD</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-        Certainly! When you add the unregistered vehicle plate number in the designated field for Excel Tours Agency, you are helping them keep accurate records and manage their garage more effectively. This ensures that the agency is aware of all the vehicles being used for tours and can schedule maintenance accordingly, which ultimately leads to a more enjoyable and safe travel experience for you. By providing the correct information, you are helping Excel Tours Agency and Excel Garage work together to provide the best service possible. Thank you for your cooperation and have a great tour!
+        Welcome! If you are a user who needs to reset your account password, you've come to the right place. To get started, please use this page to input the email address associated with your account during registration. Once you have entered your email address, you will receive a reset password link via email. Please follow the instructions in the email to reset your password and regain access to your account. If you encounter any issues during the password reset process, please do not hesitate to contact our support team for assistance. We are always here to help you get back into your account. Thank you for using this tool to reset your password.
         </p>
       </div>
 

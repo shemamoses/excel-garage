@@ -171,9 +171,7 @@
           <span style="color: hsl(218, 81%, 75%)">SERVICE</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-        Excel Travel and Tour Agency Ltd is a Private Company constrained by shared enrolled beneath 102264441(Company code/TIN/ RSSB).
-It has been corporate in 2011 beneath the activity of Mr. Felix Rurangirwa
-(50%) and Mr. Felix Gasangwa (50%) with the center commerce exercises of giving traveler transportation administrations as well as messenger administrations specialized in the Transportation sector , it was founded in 2011 with aims of providing good transportation services to the clients.
+        Dear Excel Garage Manager, please use this page to record all the services provided to the cars that come into your garage. To do this, simply fill in the input fields with the necessary information, including the driver's name, phone number, service provided, price, quantity, and the date of the service. Once you have filled in all the necessary information, press on the "Add Service" button to save the data. This will help you keep track of all the services provided and make it easier to manage your garage efficiently. Thank you for using this tool to improve your record-keeping and customer service.
         </p>
       </div>
 
