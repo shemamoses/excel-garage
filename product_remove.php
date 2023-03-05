@@ -162,6 +162,12 @@
   <button type="submit" class="btn btn-primary btn-block mb-2" name="submit">REMOVE</button>
 </form>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 <footer style="position: bottom: 0; left: 0; width: 100%; text-align: center;">
   <p style="color: white;">&copy; Excel Garage. All rights reserved.</p>
