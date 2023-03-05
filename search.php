@@ -93,6 +93,14 @@
             </div>
         </div>
     </nav>
+
+    <section class="background-radial-gradient overflow-hidden">
+  <style>
+    .bg-glass {
+      background-color: hsla(0, 0%, 100%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+  </style>
     <br>
 		<div class="card-body">
       <div class="row justify-content-center">
@@ -113,13 +121,13 @@
           $select=$mysqli->query("SELECT * FROM vehicles JOIN product ON vehicles.vehicle_id = product.vehicle_id WHERE vehicles.plate LIKE '%$input%'")or die("select failed");
       ?>
       <br>
-      
-      <div class="container-sm">
+      <div class="container-lg">
   <div class="card bg-glass">
           <div class="card-body px-4 py-3 px-md-5">
               <div class="row">
                 <div class="form-outline mb-4">
                   <div class="form-outline">
+      
       <div class="table-responsive">
           <table class="table table-hover table-striped">
           <thead class="shadow">
@@ -156,11 +164,21 @@
                   <td><?php echo $fetch['date'] ?></td>
                   <td><?php echo $fetch['time'] ?></td>
                   <td><?php echo $format; ?></td>
-                  <td><a href="product_add.php?product_id=<?php echo $fetch['product_id'] ?>"><button class="btn btn-primary">Add</button></a></td>
-                  <td><a href="product_remove.php?product_id=<?php echo $fetch['product_id'] ?>"><button class="btn btn-warning">Remove</button></a></td>
-                  <td><a href="product_update.php?product_id=<?php echo $fetch['product_id'] ?>"><button class="btn btn-info">Update</button></a></td>
-                  <td><a href="product_delete.php?product_id=<?php echo $fetch['product_id'] ?>"><button class="btn btn-danger">Delete</button></a></td>
+    <td>
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    Actions
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="product_add.php?product_id=<?php echo $fetch['product_id']; ?>">Add</></a></li>
+    <li><a class="dropdown-item" href="product_remove.php?product_id=<?php echo $fetch['product_id']; ?>">Remove</a></li>
+    <li><a class="dropdown-item" href="product_update.php?product_id=<?php echo $fetch['product_id']; ?>">Update</a></li>
+    <li><a class="dropdown-item" href="product_delete.php?product_id=<?php echo $fetch['product_id']; ?>">Delete</a></li>
+  </ul>
+</div>
+</td>
                 </tr>
+              
            	<?php
                 }
               }
@@ -176,7 +194,7 @@
           </tbody>
      <tfoot>
       <tr>
-       <th colspan="8">Total</th>
+       <th colspan="8" class="shadow">Total</th>
           <?php
             @$result=$mysqli->query("SELECT sum(product.totalprice) FROM product INNER JOIN vehicles WHERE product.vehicle_id=vehicles.vehicle_id AND vehicles.plate LIKE '%$input%'") or die("sum failed");
             while($row=mysqli_fetch_array($result)){

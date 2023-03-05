@@ -157,12 +157,16 @@
     <div class="col-md-3">
       <label style="color: white">To</label>
       <input type="date" name="date1" class="form-control" id="date-input">
-	  
     </div>
   </div>
   <br>
   <button type="submit" name="send" class="btn btn-info">Check</button>
-</div>
+  </div>
+  <center>
+  <div class="">
+    <a href="vehiclereport.php" class="btn btn-success">Single Vehicle Report</a>
+  </div>
+  </center>
 <br>
 <div class="container-lg">
   <div class="card bg-glass">
@@ -172,21 +176,19 @@
                   <div class="form-outline">
                   
 <br>
-  <center>
-		<a href="vehiclereport.php">Single Vehicle Report</button></a>
-	</center>
+  
 <div class="table-responsive container">
     <h3>Report</h3>
- 			<table id="table" class="table table-bordered table.striped">
-			 <thead class="table-info">
+ 			<table id="table" class="table table-hover table-striped">
+			 <thead class="table-info shadow">
 					<th>Driver Name</th>
-					<th>Telephone</th>
+					<th>Phone</th>
 					<th>Plate Number</th>
 					<th>Service</th>
 					<th>Price</th>
-					<th>Imported Quantity</th>
-					<th>Imported Date</th>
-					<th>Imported Time</th>
+					<th>Quantity</th>
+					<th>Date</th>
+					<th>Time</th>
 					<th>Total Price</th>
 			 </thead>
 			 <tbody>
@@ -234,7 +236,7 @@
 							{
 								?>
 								<tr>
-									<td colspan="8"><?php echo"<script>window.alert('No Record Available')</script>"?></td>
+									<td colspan="8"></td></td></td><?php echo"<script>window.alert('No Record Available')</script>"?></td>
 								</tr>
 								<?php
 							}
@@ -244,7 +246,7 @@
 			 </tbody>
      <tfoot>
       <tr>
-       <th colspan="8">Total</th>
+       <th colspan="8" class="shadow">Total</th>
           <?php
             @$result=$mysqli->query("SELECT sum(product.totalprice) FROM product INNER JOIN vehicles WHERE product.vehicle_id=vehicles.vehicle_id  AND date BETWEEN '$date' and '$date1'") or die("sum failed");
             while($row=mysqli_fetch_array($result)){

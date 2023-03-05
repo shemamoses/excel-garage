@@ -62,11 +62,11 @@ session_start();
         $mail->Subject="Recover your password";
         $mail->Body="<b>Dear User</b>
         <h3>We received a request to reset your password.</h3>
-        <p>Kindly click the below link to reset your password</p>
-        http://localhost/excel_garage_management/updatepassword.php
+        <p>Kindly click the below link to reset your password, Otherwise Ignore this message</p>
+        http://localhost/excel-garage/updatepassword.php
         <br><br>
         <p>With regrads,</p>
-        <b>Athanase Garage</b>";
+        <b>EXCEL Garage</b>";
 
         if(!$mail->send()){
             ?>

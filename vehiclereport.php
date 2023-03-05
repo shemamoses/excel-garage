@@ -193,6 +193,11 @@
   </div>
   <br>
   <button type="submit" name="send" class="btn btn-info">Check</button>
+  <center>
+  <div class="">
+    <a href="report.php" class="btn btn-success">General Report</a>
+  </div>
+  </center>
 
 		
 </div>
@@ -210,13 +215,13 @@
  			<table id="table" class="table table-hover table-striped">
 			 <thead class="table-info shadow">
 					<th>Driver Name</th>
-					<th>Telephone</th>
+					<th>Phone</th>
 					<th>Plate Number</th>
 					<th>Service</th>
 					<th>Price</th>
-					<th>Imported Quantity</th>
-					<th>Imported Date</th>
-					<th>Imported Time</th>
+					<th>Quantity</th>
+					<th>Date</th>
+					<th>Time</th>
 					<th>Total Price</th>
 			 </thead>
 			 <tbody>
