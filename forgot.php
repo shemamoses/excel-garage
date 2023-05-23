@@ -58,7 +58,7 @@ session_start();
      }
      else
      {
-        // generate token by binaryhexa 
+        // generate token by binary hexa 
         $token = bin2hex(random_bytes(50));
 
         //session_start ();
@@ -76,8 +76,7 @@ session_start();
 
         // h-hotel account
         $mail->Username='mosesshema1@gmail.com';
-        $mail->Password='zhvhoknunaywhakl
-        ';
+        $mail->Password='okomnfekbupxnbkw';
 
         // send by h-hotel email
         $mail->setFrom('mosesshema1@gmail.com', 'Password Reset');
@@ -93,7 +92,7 @@ session_start();
         <p>Kindly click the below link to reset your password, Otherwise Ignore this message</p>
         http://localhost/excel-garage/updatepassword.php
         <br><br>
-        <p>With regrads,</p>
+        <p>With regards,</p>
         <b>EXCEL Garage</b>";
 
         if(!$mail->send()){

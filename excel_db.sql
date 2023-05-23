@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 05:40 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.10
+-- Generation Time: May 23, 2023 at 10:37 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -33,14 +32,14 @@ CREATE TABLE `manager` (
   `username` varchar(30) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `manager`
 --
 
 INSERT INTO `manager` (`manager_id`, `username`, `email`, `password`) VALUES
-(1, 'patrick', 'aimepatrick2003@gmail.com', '123');
+(1, 'shema', 'mosesshema1@gmail.com', '123');
 
 -- --------------------------------------------------------
 
@@ -59,7 +58,7 @@ CREATE TABLE `product` (
   `time` time NOT NULL,
   `totalprice` int(10) DEFAULT NULL,
   `vehicle_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `product`
@@ -69,7 +68,8 @@ INSERT INTO `product` (`product_id`, `driver`, `telephone`, `service`, `price`, 
 (1, 'patrick', '0785043572', 'INTEBE', 10000, 0, '2023-02-19', '19:21:11', 0, 1),
 (2, 'shema', '0788469678', 'AMAPINE', 5000, 6, '2023-02-18', '00:00:00', 30000, 3),
 (3, 'shema', '0788469678', 'AMAPINE', 300000, 2, '2023-02-18', '06:08:18', 600000, 8),
-(4, 'patrick', '0785043572', 'INTEBE', 20000, 15, '2023-02-18', '06:22:08', 300000, 1);
+(4, 'patrick', '0785043572', 'INTEBE', 20000, 15, '2023-02-18', '06:22:08', 300000, 1),
+(5, 'SHEMA', '0788812345', 'INTEBE', 3000, 5, '2023-03-13', '14:04:55', 15000, 13);
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,7 @@ INSERT INTO `product` (`product_id`, `driver`, `telephone`, `service`, `price`, 
 CREATE TABLE `vehicles` (
   `vehicle_id` int(11) NOT NULL,
   `plate` varchar(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vehicles`
@@ -91,6 +91,7 @@ INSERT INTO `vehicles` (`vehicle_id`, `plate`) VALUES
 (11, 'RAB001A'),
 (12, 'RAB002B'),
 (1, 'RAB420X'),
+(13, 'RAC002D'),
 (3, 'RAD123C'),
 (8, 'RAZ012B');
 
@@ -132,13 +133,13 @@ ALTER TABLE `manager`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
